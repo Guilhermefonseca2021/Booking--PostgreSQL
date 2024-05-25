@@ -1,4 +1,4 @@
-package com.booking.service;
+package com.booking.services;
 
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.booking.model.Contact;
+import com.booking.models.Contact;
 import com.booking.repositories.ContactRepo;
 // import com.booking.constant.Constant.PHOTO_DIRECTORY;
 
@@ -25,7 +25,7 @@ import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
 @Service
 @Slf4j // the logs by here
-@Transactional(rollbackOn = Exception.class)
+@Transactional(rollbackOn = Exception.class) //every thansaction will be show up
 @RequiredArgsConstructor
 // @RequiredArgsConstructor // we gonna be doing a dependency injection here
 public class ContactService {
